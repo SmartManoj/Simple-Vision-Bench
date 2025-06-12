@@ -4,6 +4,9 @@ How many fingers are in this image?
 
 ![hand.png](hand.png)
 
+---
+
+o3 should annotate the image with the number of fingers first and then respond.
 
 
 Credits:

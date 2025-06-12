@@ -27,6 +27,7 @@ finger_names = ["thumb", "index", "middle", "ring", "pinky", "extra"]
 results = [
     {'points': [{'x': 0.7119140625, 'y': 0.51171875}]},
     {'points': [{'x': 0.6123046875, 'y': 0.35546875}]},
+    # {'points': [{'x': 0.5319140625, 'y': 0.3056640625}]},
     {'points': [{'x': 0.4619140625, 'y': 0.3056640625}]},
     {'points': [{'x': 0.3828125, 'y': 0.35546875}]},
     {'points': [{'x': 0.3046875, 'y': 0.4072265625}]},
@@ -39,8 +40,10 @@ def hand_test(i):
     image = Image.open("output.png").convert("RGBA")
     query = f"{finger_names[i]} finger"
     print(query)
-    result = model.point(image, query)
-    # result = results[i]
+    if 0:
+        result = model.point(image, query)
+    else:
+        result = results[i]
     print(result)
     points = result["points"]
 
